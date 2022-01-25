@@ -1,0 +1,167 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+main {
+  min-height: 100vh;
+  background: linear-gradient(to right, rgba(190, 163, 107, 0.582), orange);
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 4.6rem;
+  padding: 4rem;
+  color: white;
+  align-self: center;
+}
+
+.input-section {
+  display: flex;
+  min-height: 4rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#user-input {
+  font-size: inherit;
+  position: relative;
+  z-index: 1;
+}
+
+.my-form {
+  display: flex;
+}
+
+#user-input,
+.submit-button {
+  border: none;
+  background: white;
+  padding: 1rem;
+}
+
+.submit-button:active {
+  background: orange;
+}
+
+.submit-button:active svg path {
+  fill: white;
+}
+
+.submit-button svg {
+  height: 2rem;
+  width: 100%;
+  object-fit: contain;
+}
+
+.submit-button svg path {
+  fill: orange;
+}
+
+#filter {
+  margin-left: 2rem;
+  flex: 0 1 9rem;
+  background: white;
+  border: none;
+  color: rgb(185, 130, 28);
+  padding: 1rem;
+  font-size: inherit;
+}
+
+.todo-list-items-container {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+
+.todo-list-item {
+  display: flex;
+  min-height: 4rem;
+  margin-top: 4rem;
+  justify-content: center;
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+.todo-list-item p {
+  flex: 0 1 42rem;
+  padding-left: 0.5rem;
+  background: white;
+  display: flex;
+  align-items: center;
+}
+
+.todo-button-container {
+  color: white;
+  flex: 0 1 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-button-container img {
+  pointer-events: none;
+}
+
+.check-container {
+  background: green;
+}
+.trash-container {
+  background: orange;
+}
+
+.completed {
+  opacity: 0.3;
+  text-decoration: line-through;
+}
+
+.deleted {
+  transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
+}
+
+@media screen and (max-width: 500px) {
+  html {
+    font-size: 40%;
+  }
+}
+
+@media screen and (max-width: 345px) {
+  .input-section {
+    flex-basis: 15rem;
+  }
+  .my-form {
+    flex-grow: 1;
+    margin: 0 2rem;
+  }
+
+  .my-form input {
+    flex-grow: 1;
+  }
+
+  #filter {
+    flex-grow: 1;
+    margin: 0 2rem;
+  }
+
+  .todo-list-item {
+    margin: 2rem 2rem;
+  }
+}
